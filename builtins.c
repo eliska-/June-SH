@@ -5,7 +5,7 @@
 ** Login   <benaro_k@epitech.net>
 ** 
 ** Started on  Thu Dec 19 16:55:38 2013 Kevin BENAROCHE
-** Last update Tue May 13 16:11:23 2014 Kevin BENAROCHE
+** Last update Tue May 13 17:21:31 2014 Kevin BENAROCHE
 */
 
 #include <stdlib.h>
@@ -61,8 +61,14 @@ int	cd(char *path, char *option, char ***environ)
 
 int	my_setenv(char *name, char *value, char ***env)
 {
-  if (name == NULL || value == NULL)
+  if (name == NULL)
     return (-1);
+  if (value == NULL)
+    {
+      if ((value = malloc(2)) == NULL)
+	my_putstr_error(ERR_MALLOC);
+      value[0] = '\0';
+    }
   return (setenv_value(name, value, env));
 }
 
