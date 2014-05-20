@@ -1,0 +1,18 @@
+/*
+** echo.c for 42sh in /home/benaro_k/rendu/June-SH
+** 
+** Made by Kevin BENAROCHE
+** Login   <benaro_k@epitech.net>
+** 
+** Started on  Tue May 20 14:16:07 2014 Kevin BENAROCHE
+** Last update Tue May 20 14:18:50 2014 Kevin BENAROCHE
+*/
+
+int	my_echo(char **args)
+{
+  int	i;
+
+  i = 0;
+  while (args[i] != NULL)
+    printf("Args[%d] = %s\n", i, args[i++]); 
+}

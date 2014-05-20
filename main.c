@@ -5,7 +5,7 @@
 ** Login   <benaro_k@epitech.net>
 ** 
 ** Started on  Mon Jan  6 18:19:46 2014 Kevin BENAROCHE
-** Last update Tue May 13 16:37:08 2014 Kevin BENAROCHE
+** Last update Tue May 20 14:15:51 2014 Kevin BENAROCHE
 */
 
 #include <stdlib.h>
@@ -71,6 +71,8 @@ int	check_cmd(char **args, char *cmd, char *buffer, char ***env)
     return (get_env(*env));
   if (my_strstr(args[0], "exit") == 0)
     good_bye(args, cmd, buffer, *env);
+  if (my_strstr(args[0], "echo") == 0)
+    return (my_echo(args));
   return (1);
 }
 

@@ -5,7 +5,7 @@
 ## Login   <benaro_k@epitech.net>
 ## 
 ## Started on  Mon Jan  6 18:06:17 2014 Kevin BENAROCHE
-## Last update Tue May 13 16:06:21 2014 Kevin BENAROCHE
+## Last update Tue May 20 14:19:18 2014 Kevin BENAROCHE
 ##
 
 SRC=    main.c \
@@ -17,7 +17,8 @@ SRC=    main.c \
 	setenv.c \
 	get_env.c \
 	pure_str.c \
-	aggreg.c
+	aggreg.c \
+	echo.c
 
 NAME=	mysh
 
